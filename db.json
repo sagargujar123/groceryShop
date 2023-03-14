@@ -1,0 +1,142 @@
+{
+  "products": [
+    {
+      "imageUrl": "../../assets/images/bread.jpg",
+      "prodName": "Brown Bread",
+      "price": 12,
+      "qty": 0,
+      "id": 1
+    },
+    {
+      "imageUrl": "../../assets/images/oreo.jpg",
+      "prodName": "Oreo Biscuits",
+      "price": 20,
+      "qty": 0,
+      "id": 2
+    },
+    {
+      "imageUrl": "../../assets/images/orange.jpg",
+      "prodName": "Orange",
+      "price": 50,
+      "qty": 0,
+      "id": 3
+    },
+    {
+      "imageUrl": "../../assets/images/rice.jpg",
+      "prodName": "Rice Pack",
+      "price": 30,
+      "qty": 0,
+      "id": 4
+    }
+  ],
+  "cart": [],
+  "orders": [
+    {
+      "products": [
+        {
+          "imageUrl": "../../assets/images/bread.jpg",
+          "prodName": "Brown Bread",
+          "price": 12,
+          "qty": 3,
+          "id": 1
+        },
+        {
+          "imageUrl": "../../assets/images/oreo.jpg",
+          "prodName": "Oreo Biscuits",
+          "price": 20,
+          "qty": 2,
+          "id": 2
+        }
+      ],
+      "id": 1
+    },
+    {
+      "products": [
+        {
+          "imageUrl": "../../assets/images/bread.jpg",
+          "prodName": "Brown Bread",
+          "price": 12,
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "imageUrl": "../../assets/images/rice.jpg",
+          "prodName": "Rice Pack",
+          "price": 30,
+          "qty": 1,
+          "id": 4
+        },
+        {
+          "imageUrl": "../../assets/images/orange.jpg",
+          "prodName": "Orange",
+          "price": 50,
+          "qty": 2,
+          "id": 3
+        }
+      ],
+      "id": 2
+    },
+    {
+      "products": [
+        {
+          "imageUrl": "../../assets/images/rice.jpg",
+          "prodName": "Rice Pack",
+          "price": 30,
+          "qty": 5,
+          "id": 4
+        },
+        {
+          "imageUrl": "../../assets/images/bread.jpg",
+          "prodName": "Brown Bread",
+          "price": 12,
+          "qty": 4,
+          "id": 1
+        }
+      ],
+      "id": 3
+    },
+    {
+      "products": [
+        {
+          "imageUrl": "../../assets/images/bread.jpg",
+          "prodName": "Brown Bread",
+          "price": 12,
+          "qty": 2,
+          "id": 1
+        },
+        {
+          "imageUrl": "../../assets/images/oreo.jpg",
+          "prodName": "Oreo Biscuits",
+          "price": 20,
+          "qty": 2,
+          "id": 2
+        }
+      ],
+      "id": 4
+    },
+    {
+      "products": [
+        {
+          "imageUrl": "../../assets/images/orange.jpg",
+          "prodName": "Orange",
+          "price": 50,
+          "qty": 5,
+          "id": 3
+        }
+      ],
+      "id": 5
+    }
+  ],
+  "userDetails": [
+    {
+      "username": "vishalpatile111",
+      "password": "vishal13",
+      "id": 1
+    },
+    {
+      "username": "sdffd",
+      "password": "1234",
+      "id": 2
+    }
+  ]
+}

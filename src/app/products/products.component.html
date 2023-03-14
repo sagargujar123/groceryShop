@@ -1,0 +1,20 @@
+<div class="row justify-content-center">
+    <div class="col-sm-8 col-md-10 col-lg-10 my-3 display-contents">
+        <mat-card *ngFor="let product of products" class="float-child m-1 border rounded bg-light"
+            style="width: 16rem; height: 24rem;">
+            <img mat-card-image [src]="product.imageUrl" class="p-1" alt="Photo of a Shiba Inu">
+            <mat-card-content>
+                <h2>{{product.prodName}}</h2>
+                <h2>{{product.price | currency:"INR":"symbol"}}</h2>
+            </mat-card-content>
+            <mat-card-actions>
+                <button class="btn" [style.background-color]="product.id==selectedProduct ? 'pink':'green'" (click)="addToCart(product)">Add to Cart</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+
+    <div class="col-sm-2 col-md-2 col-lg-2 mt-3 text-center border border-grey rounded">
+        <h2 class="text-bold text-success mt-3">Your Selected Items <br><span class="text-dark">{{this.itemsInCart}}</span></h2>
+        <button type="submit" class="btn btn-outline-success mt-3" (click)="goToOrders()">Your Orders</button>
+    </div>
+</div>

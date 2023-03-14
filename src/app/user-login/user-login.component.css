@@ -1,0 +1,15 @@
+.row {
+  margin-top: 150px;
+}
+
+.example-card {
+  width: 420px;
+  height: 320px;
+  text-align: center;
+  background-color: rgb(245, 240, 240);
+}
+
+.w-100 {
+  width: 100%;
+  padding: 4px;
+}

@@ -1,0 +1,19 @@
+.float-child{
+    float: left;
+    /* margin-top: 10px; */
+    /* margin:5px; */
+}
+
+img{
+    height:246px;
+}
+
+button{
+    width: 100%;
+    margin-bottom: 5px;
+}
+.col-md-2{
+    height: 380px;
+    width: auto;
+}
+  

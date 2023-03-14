@@ -1,0 +1,81 @@
+<ng-container *ngIf="orders.length!==0">
+    <div class="row justify-content-center">
+        <div class="col-sm-12 col-md-12 col-lg-7 mt-4">
+            <mat-list class="border border-2 mt-3">
+                <div class="row">
+                    <div class="col-8 col-md-8">
+                        <mat-list-item *ngFor="let product of orders" class="my-4">
+                            <div class="row d-flex flex-row">
+                                <div class="col-1">
+
+                                </div>
+                                <div class="col-5">
+                                    <span matListItemTitle>{{product.prodName}}</span>
+                                    <span matListItemLine>{{product.price | currency:"INR":"symbol"}}</span>
+                                </div>
+                                <div class="col-4">
+                                    <span class="h6">{{product.qty}} items</span>
+                                    <span matListItemLine class="h6 text-success">{{product.price * product.qty |
+                                        currency:"INR":"symbol"}}</span>
+                                </div>
+                            </div>
+                        </mat-list-item>
+                    </div>
+                    <div class="col-4 col-md-4 mt-4" style="border-left: 1px solid rgb(201, 197, 197);">
+                        <mat-list-item>
+                            <span matListItemTitle class="pb-2">Total Amount</span>
+                            <span matListItemLine class="h6 text-success">{{amount | currency:"INR":"symbol"}}</span>
+                        </mat-list-item>
+                        <br>
+                        <mat-list-item>
+                            <span matListItemTitle class="pb-2">Final Amount</span>
+                            <span matListItemLine class="h6 text-success">{{amount | currency:"INR":"symbol"}}</span>
+                        </mat-list-item>
+                    </div>
+                </div>
+                <hr />
+                <div class="text-center">
+                    <button class="btn btn-outline-success" (click)="payment()" style="width: 200px;">Payment
+                        &nbsp;&nbsp;{{amount | currency:"INR":"symbol"}}</button>
+                </div>
+            </mat-list>
+        </div>
+    </div>
+</ng-container>
+
+<ng-container *ngIf="orders.length==0">
+    <div class="row mt-5 justify-content-center">
+        <mat-card class="example-card align-items-center">
+            <mat-card-title class="mt-1">Payment Successful!!</mat-card-title>
+            <mat-card-content class="text-center" style="margin-top: 30px;">
+                <div class="mt-2">
+                    <img src="../../assets/images/payment.png" class="empty-cart" alt="empty card image">
+                    <h2>Your Payment is done!</h2>
+                    <h3>Thank you</h3>
+                </div> 
+            </mat-card-content>
+        </mat-card>
+    </div>
+</ng-container>
+  
+<!-- <span><p>{{product.qty}} items</p></span>
+<span class="text-success"><h3>{{product.price*product.qty | currency:"INR":"symbol"}}</h3></span> -->
+
+<!-- <table class="table table-secondary mt-3">
+    <thead class="">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Product</th>
+        <th scope="col">Price</th>
+        <th scope="col">Total</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let product of orders">
+        <th scope="row">{{product.id}}</th>
+        <td>{{product.prodName}}</td>
+        <td>{{product.price}}</td>
+        <td>{{product.qty}}</td>
+      </tr>
+    </tbody>
+  </table> -->

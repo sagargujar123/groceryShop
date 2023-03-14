@@ -1,0 +1,43 @@
+<ng-container *ngIf="products!=0">
+  <div class="row border border-1 mt-2">
+    <mat-card *ngFor="let product of products" class="product-card col-11 col-sm-11 col-md-10 col-lg-6 m-3">
+      <div class="row align-items-center">
+        <div class="col-4 col-md-4 image text-center float-left">
+          <img mat-card-image [src]="product.imageUrl" class="prod-image m-2" alt="Photo of a Shiba Inu">
+          <h3 class="mb-1">{{product.prodName}} <br> {{product.price | currency:"INR":"symbol"}}</h3>
+        </div>
+        <div class="col-4 col-md-4 text-center float-left">
+          <div class="btn-group border" role="group" aria-label="Basic example">
+            <button type="button" class="btn btn-secondary" (click)="decreaseItem(product.id)">-</button>
+            <span class="mx-3 my-2 text-center fw-bold" *ngIf="product.id">{{product.qty}}</span>
+            <button type="button" class="btn btn-secondary" (click)="addItem(product.id)">+</button>
+          </div>
+        </div>
+        <div class="col-3 col-md-4 col-sm-3 text-center float-left">
+          <h3>{{product.qty}} item</h3>
+          <h2 *ngIf="product.id">{{product.price*product.qty | currency:"INR":"symbol"}}</h2>
+        </div>
+      </div>
+    </mat-card>
+    <div class="my-3">
+      <button class="btn btn-outline-success mx-2" (click)="checkOut()">checkout &nbsp;&nbsp;<span
+          class="pl-5">price</span></button>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="products==0">
+  <div class="row mt-5 justify-content-center">
+    <mat-card class="example-card align-items-center">
+      <mat-card-title class="mt-1">My Cart</mat-card-title>
+      <mat-card-content class="text-center" style="margin-top: 30px;">
+        <div class="mt-2">
+          <img src="../../assets/images/empty-cart.jpg" class="empty-cart" alt="empty card image">
+          <h2>Your Cart is empty!</h2>
+          <h3>Add item to it now</h3>
+        </div>
+        <button routerLink="/products" mat-flat-button color="primary">Shop Now</button>
+      </mat-card-content>
+    </mat-card>
+  </div>
+</ng-container>
